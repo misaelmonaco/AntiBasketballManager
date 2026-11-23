@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #060913;
+    color: #f1f5f9;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  table,
+  .font-mono {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* FM / Pro Basketball Manager Tactical & Broadcast Surfaces */
+.fm-panel {
+  background: linear-gradient(180deg, rgba(17, 24, 39, 0.94) 0%, rgba(10, 15, 28, 0.98) 100%);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.75), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+}
+
+.fm-card {
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.92) 0%, rgba(9, 13, 25, 0.96) 100%);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  box-shadow: 0 8px 24px -10px rgba(0, 0, 0, 0.65), inset 0 1px 0 0 rgba(255, 255, 255, 0.045);
+}
+
+.fm-subcard {
+  background: rgba(6, 10, 20, 0.72);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.fm-tabs {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  border-radius: 0.75rem;
+  background: rgba(6, 10, 20, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.fm-tab {
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  color: #94a3b8;
+  transition: all 150ms ease;
+  cursor: pointer;
+}
+
+.fm-tab:hover {
+  color: #f8fafc;
+  background: rgba(30, 41, 59, 0.6);
+}
+
+.fm-tab-active {
+  background: linear-gradient(135deg, #f97316 0%, #f59e0b 100%);
+  color: #090d16;
+  box-shadow: 0 2px 10px -2px rgba(249, 115, 22, 0.45);
+}
+
+.fm-tab-active:hover {
+  color: #090d16;
+  background: linear-gradient(135deg, #fb923c 0%, #fbbf24 100%);
+}
+
+.fm-table-head {
+  background: rgba(6, 10, 20, 0.88);
+  color: #94a3b8;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.fm-modal {
+  background: linear-gradient(180deg, rgba(17, 24, 39, 0.98) 0%, rgba(10, 15, 28, 0.99) 100%);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 24px 50px -12px rgba(0, 0, 0, 0.85), inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
+}
+
+.tactical-grid-bg {
+  background-color: #060913;
+  background-image:
+    radial-gradient(circle at 18% 15%, rgba(249, 115, 22, 0.10) 0%, transparent 42%),
+    radial-gradient(circle at 82% 85%, rgba(56, 189, 248, 0.07) 0%, transparent 45%),
+    linear-gradient(rgba(148, 163, 184, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 36px 36px, 36px 36px;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom dark scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050811;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f97316;
+}
+
+@keyframes chatTypingDot {
+  0%,
+  80%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.35;
+  }
+  40% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+
+.chat-typing-dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 9999px;
+  background-color: #fb923c;
+  animation: chatTypingDot 1.15s infinite ease-in-out;
+}
